@@ -1,0 +1,39 @@
+<h3>
+  Store component
+</h3>
+
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-3 block" [ngClass]="value1 < 0 ? 'block-red' : 'block-blue'">{{ value1 }}</div>
+  <div class="col-md-3 block" [ngClass]="value2 < 0 ? 'block-red' : 'block-blue'">{{ value2 }}</div>
+  <div class="col-md-3"></div>
+</div>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-3 block">
+    Variable 1: <strong>{{ key1 }}</strong><br>
+    <button class="btn btn-danger" (click)="remove(key1)">Remove var 1</button>
+  </div>
+  <div class="col-md-3 block">
+    Variable 2: <strong>{{ key2 }}</strong><br>
+    <button class="btn btn-danger" (click)="remove(key2)">Remove var 2</button>
+  </div>
+  <div class="col-md-3"></div>
+</div>
+
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6" id="actionsPanel">
+    <div class="card">
+      <div class="card-header">Actions Panel</div>
+      <div class="card-body">
+        <button class="btn btn-success" (click)="changeOnce()">Change Once</button>
+        <button class="btn btn-success" (click)="change()">Change Periodical</button>
+        <button class="btn btn-danger" (click)="stopChange()">Stop Change</button><br>
+        <button class="btn btn-primary" (click)="restore()">Restore</button>
+        <button class="btn btn-primary" (click)="clear()">Clear Store</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3"></div>
+</div>
